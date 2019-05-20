@@ -2,16 +2,38 @@
   text-align: center;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
 }
+.wrp {
+  width: 100%;
+  height: 100%;
+}
 .submit-new {
-  width: 40%;
+  width: 60%;
   background: #fff;
   border-radius: 15px;
   padding: 20px 10px;
+}
+.ant-layout{
+  height: 100%;
+}
+.ant-menu-item{
+  margin-top: 0;
+}
+.art-item{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-wrp {
+  text-align: left;
+}
+.logo-wrp img{
+  width: 80px;
 }
