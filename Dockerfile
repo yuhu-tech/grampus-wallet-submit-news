@@ -1,4 +1,4 @@
-FROM node:9-alpine as builder
+FROM node:10-alpine as builder
 MAINTAINER in_vane <in_vane@yuhu.tech>
 
 ENV PATH=$PATH:/app/node_modules/.bin
@@ -17,9 +17,12 @@ RUN cd /tmp && mkdir -p node_modules \
     && mv dev_node_modules node_modules
 
 COPY . /app
-RUN cd /app && ln -fs /tmp/node_modules && yarn build
+RUN cd /app \ 
+    && ln -fs /tmp/node_modules \
+    && npm uninstall babel-jest@24.8.0 \
+    && yarn build
 
-FROM node:9-alpine
+FROM node:10-alpine
 
 ENV NODE_ENV=production
 
