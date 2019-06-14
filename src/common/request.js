@@ -1,5 +1,5 @@
 import { GraphQLClient } from 'graphql-request'
-const endpoint = 'https://assets.yuhu.tech/query'
+const endpoint = 'http://47.244.97.208:8080/query'
 
 let gql = async (param, variables) => {
   const graphQLClient = new GraphQLClient(endpoint, {
